@@ -1,5 +1,5 @@
 #
-# Copyright 2015 The Android Open Source Project
+# Copyright 2018 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,14 +14,8 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_crosshatch.mk \
-    $(LOCAL_DIR)/crosshatch.mk \
-    $(LOCAL_DIR)/aosp_blueline.mk \
-    $(LOCAL_DIR)/blueline.mk \
-    
-COMMON_LUNCH_CHOICES := \
-    aosp_crosshatch-user \
-    aosp_blueline-user \
-    crosshatch-user \
-    blueline-user 
+# Inherit AOSP product configuration
+$(call inherit-product, device/google/crosshatch/aosp_blueline.mk)
+
+# Remove AOSP prefix from product name
+PRODUCT_NAME := blueline
