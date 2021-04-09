@@ -1,0 +1,50 @@
+[
+    {
+        "target_path":  "device/google/crosshatch-sepolicy",
+        "repository":   "hentaiOS-devices/android_device_google_crosshatch-sepolicy",
+        "remote":       "github",
+        "revision":     "rika"
+    },
+    {
+        "target_path":  "hardware/qcom/sdm845/bt",
+        "repository":   "platform/hardware/qcom/sdm845/bt",
+        "remote":       "aosp",
+        "revision":     "refs/tags/android-11.0.0_r34"
+    },
+    {
+        "target_path":  "hardware/qcom/sdm845/data/ipacfg-mgr",
+        "repository":   "PixelDust-Eleven/android_hardware_qcom_sdm845_data_ipacfg-mgr",
+        "remote":       "github",
+        "revision":     "11"
+    },
+    {
+        "target_path":  "hardware/qcom/sdm845/gps",
+        "repository":   "platform/hardware/qcom/sdm845/gps",
+        "remote":       "aosp",
+        "revision":     "refs/tags/android-11.0.0_r34"
+    },
+    {
+        "target_path":  "hardware/qcom/sdm845/display",
+        "repository":   "PixelDust-Eleven/android_hardware_qcom_sdm845_display",
+        "remote":       "github",
+        "revision":     "11"
+    },
+    {
+        "target_path":  "hardware/qcom/sdm845/media",
+        "repository":   "PixelDust-Eleven/android_hardware_qcom_sdm845_media",
+        "remote":       "github",
+        "revision":     "11"
+    },
+    {
+        "target_path":  "device/google/crosshatch-kernel",
+        "repository":   "hentaiOS-Devices/device_google_crosshatch-kernel",
+        "remote":       "github",
+        "revision":     "eleven"
+    },
+    {
+        "target_path":  "vendor/google",
+        "repository":   "JamieHoSzeYui/vendor_google",
+        "remote":       "github",
+        "revision":     "11"
+    }
+]
