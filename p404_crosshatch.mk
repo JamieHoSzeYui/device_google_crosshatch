@@ -26,28 +26,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_system_ext.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 
 #
-# All components inherited here go to product image
-#
-$(call inherit-product, vendor/hentai/build/product/hentai_product.mk)
-
-#
 # All components inherited here go to vendor image
 #
 # TODO(b/136525499): move *_vendor.mk into the vendor makefile later
 $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
-
 # Inherit AOSP stuff
-$(call inherit-product, vendor/hentai/config/common_telephony.mk)
-$(call inherit-product, device/google/crosshatch/device-blueline.mk)
+$(call inherit-product, vendor/404/config/common_telephony.mk)
+$(call inherit-product, device/google/crosshatch/device-crosshatch.mk)
 $(call inherit-product-if-exists, vendor/google_devices/crosshatch/proprietary/device-vendor.mk)
 
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml
 
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := Google
-PRODUCT_NAME := hentai_blueline
-PRODUCT_DEVICE := blueline
-PRODUCT_MODEL := Pixel 3
+PRODUCT_NAME := hentai_crosshatch
+PRODUCT_DEVICE := crosshatch
+PRODUCT_MODEL := Pixel 3 XL
 
-$(call inherit-product, vendor/google/blueline/blueline-vendor.mk)
+$(call inherit-product, vendor/google/crosshatch/crosshatch-vendor.mk)
