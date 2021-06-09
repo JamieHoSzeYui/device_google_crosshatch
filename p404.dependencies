@@ -42,6 +42,12 @@
         "revision":     "eleven"
     },
     {
+        "target_path":  "hardware/google/pixel",
+        "repository":   "GrapheneOS/platform_hardware_google_pixel",
+        "remote":       "github",
+        "revision":     "eleven"
+    },
+    {
         "target_path":  "vendor/google",
         "repository":   "JamieHoSzeYui/vendor_google",
         "remote":       "github",
