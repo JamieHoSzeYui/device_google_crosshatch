@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/p404_crosshatch.mk \
-    $(LOCAL_DIR)/p404_blueline.mk \
+    $(LOCAL_DIR)/aosp_crosshatch.mk \
+    $(LOCAL_DIR)/aosp_blueline.mk \
 
 COMMON_LUNCH_CHOICES := \
-    p404_crosshatch-user \
-    p404_blueline-user
+    aosp_crosshatch-user \
+    aosp_blueline-user
