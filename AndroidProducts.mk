@@ -15,13 +15,13 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_crosshatch.mk \
+    $(LOCAL_DIR)/styx_crosshatch.mk \
     $(LOCAL_DIR)/crosshatch.mk \
-    $(LOCAL_DIR)/aosp_blueline.mk \
+    $(LOCAL_DIR)/styx_blueline.mk \
     $(LOCAL_DIR)/blueline.mk \
     
 COMMON_LUNCH_CHOICES := \
-    aosp_crosshatch-user \
-    aosp_blueline-user \
+    styx_crosshatch-user \
+    styx_blueline-user \
     crosshatch-user \
     blueline-user 

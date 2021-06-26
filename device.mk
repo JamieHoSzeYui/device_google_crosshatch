@@ -23,7 +23,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom/sdm845 \
     vendor/google/camera \
     vendor/qcom/sdm845 \
-    vendor/google/interfaces
+    vendor/google/interfaces \
+    packages/apps/Bluetooth
 
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true

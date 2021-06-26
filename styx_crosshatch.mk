@@ -18,7 +18,6 @@
 # All components inherited here go to system image
 #
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/mainline_system.mk)
 
 #
 # All components inherited here go to system_ext image
@@ -32,26 +31,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 # TODO(b/136525499): move *_vendor.mk into the vendor makefile later
 $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
-
-#
-# All components inherited here go to product image
-#
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_product.mk)
-
-# Inherit AOSP stuff
-#$(call inherit-product, vendor/aosp/configs/common.mk)
-$(call inherit-product, device/google/crosshatch/device-blueline.mk)
+# Inherit StyxOS stuff
+$(call inherit-product, vendor/styx/config/common.mk)
+$(call inherit-product, device/google/crosshatch/device-crosshatch.mk)
 $(call inherit-product-if-exists, vendor/google_devices/crosshatch/proprietary/device-vendor.mk)
 
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml
 
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := Google
-PRODUCT_NAME := aosp_blueline
-PRODUCT_DEVICE := blueline
-PRODUCT_MODEL := Pixel 3
+PRODUCT_NAME := styx_crosshatch
+PRODUCT_DEVICE := crosshatch
+PRODUCT_MODEL := Pixel 3 XL
 
-# GMS
-WITH_GMS := true
-
-$(call inherit-product, vendor/google/blueline/blueline-vendor.mk)
+$(call inherit-product, vendor/google/crosshatch/crosshatch-vendor.mk)
