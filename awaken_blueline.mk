@@ -39,7 +39,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_product.mk)
 
 # Inherit AOSP stuff
-#$(call inherit-product, vendor/aosp/configs/common.mk)
+$(call inherit-product, vendor/awaken/config/common.mk)
 $(call inherit-product, device/google/crosshatch/device-blueline.mk)
 $(call inherit-product-if-exists, vendor/google_devices/crosshatch/proprietary/device-vendor.mk)
 
@@ -47,11 +47,13 @@ PRODUCT_COPY_FILES += $(LOCAL_PATH)/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/
 
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := Google
-PRODUCT_NAME := aosp_blueline
+PRODUCT_NAME := awaken_blueline
 PRODUCT_DEVICE := blueline
 PRODUCT_MODEL := Pixel 3
 
 # GMS
-WITH_GMS := true
+USE_GAPPS := true
 
 $(call inherit-product, vendor/google/blueline/blueline-vendor.mk)
+
+AWAKEN_BUILD_TYPE := PRIVATE

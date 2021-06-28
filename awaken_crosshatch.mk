@@ -32,7 +32,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
 # Inherit AOSP stuff
-# $(call inherit-product, vendor/aosp/config/common_telephony.mk)
+$(call inherit-product, vendor/awaken/config/common.mk)
 $(call inherit-product, device/google/crosshatch/device-crosshatch.mk)
 $(call inherit-product-if-exists, vendor/google_devices/crosshatch/proprietary/device-vendor.mk)
 
@@ -40,8 +40,11 @@ PRODUCT_COPY_FILES += $(LOCAL_PATH)/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/
 
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := Google
-PRODUCT_NAME := aosp_crosshatch
+PRODUCT_NAME := awaken_crosshatch
 PRODUCT_DEVICE := crosshatch
 PRODUCT_MODEL := Pixel 3 XL
 
 $(call inherit-product, vendor/google/crosshatch/crosshatch-vendor.mk)
+
+AWAKEN_BUILD_TYPE := PRIVATE
+USE_GAPPS := true
