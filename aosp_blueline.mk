@@ -51,6 +51,8 @@ PRODUCT_NAME := aosp_blueline
 PRODUCT_DEVICE := blueline
 PRODUCT_MODEL := Pixel 3
 
+BUILD_FINGERPRINT := "google/blueline/blueline:11/RQ3A.210705.001/7380771:user/release-keys"
+
 # GMS
 WITH_GMS := true
 

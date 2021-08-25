@@ -44,6 +44,8 @@ PRODUCT_NAME := aosp_crosshatch
 PRODUCT_DEVICE := crosshatch
 PRODUCT_MODEL := Pixel 3 XL
 
+BUILD_FINGERPRINT := "google/crosshatch/crosshatch:11/RQ3A.210705.001/7380771:user/release-keys"
+
 # GMS
 WITH_GMS := true
 
