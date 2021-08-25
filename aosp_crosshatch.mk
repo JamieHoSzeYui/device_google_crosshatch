@@ -44,4 +44,7 @@ PRODUCT_NAME := aosp_crosshatch
 PRODUCT_DEVICE := crosshatch
 PRODUCT_MODEL := Pixel 3 XL
 
+# GMS
+WITH_GMS := true
+
 $(call inherit-product, vendor/google/crosshatch/crosshatch-vendor.mk)
