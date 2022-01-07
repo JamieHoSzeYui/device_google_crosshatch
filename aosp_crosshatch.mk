@@ -44,6 +44,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
 $(call inherit-product, device/google/crosshatch/device-crosshatch.mk)
 $(call inherit-product-if-exists, vendor/google_devices/crosshatch/proprietary/device-vendor.mk)
 
+$(call inherit-product, vendor/google/crosshatch/crosshatch-vendor.mk)
+
 PRODUCT_SOONG_NAMESPACES += \
     vendor/google_devices/crosshatch/proprietary/hardwareinfo
 
@@ -64,5 +66,5 @@ endif
 PRODUCT_MANUFACTURER := Google
 PRODUCT_NAME := aosp_crosshatch
 PRODUCT_DEVICE := crosshatch
-PRODUCT_BRAND := Android
-PRODUCT_MODEL := AOSP on crosshatch
+PRODUCT_BRAND := google
+PRODUCT_MODEL := Pixel 3 XL

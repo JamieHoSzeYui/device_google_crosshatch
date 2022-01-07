@@ -44,6 +44,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
 $(call inherit-product, device/google/crosshatch/device-blueline.mk)
 $(call inherit-product-if-exists, vendor/google_devices/crosshatch/proprietary/device-vendor.mk)
 
+$(call inherit-product, vendor/google/blueline/blueline-vendor.mk)
+
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml
 
 # STOPSHIP deal with Qualcomm stuff later
@@ -61,5 +63,5 @@ endif
 PRODUCT_MANUFACTURER := Google
 PRODUCT_NAME := aosp_blueline
 PRODUCT_DEVICE := blueline
-PRODUCT_BRAND := Android
-PRODUCT_MODEL := AOSP on blueline
+PRODUCT_BRAND := google
+PRODUCT_MODEL := Pixel 3
